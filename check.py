@@ -75,7 +75,7 @@ hostname = socket.gethostname()
 count=0
 for device in devicelist:
     # Run command and capture output
-    cmd = ['ioreg', '-c', device ]
+    cmd = ['/usr/sbin/ioreg', '-c', device ]
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE,
                               stderr=subprocess.PIPE)
     out,err = p.communicate()
